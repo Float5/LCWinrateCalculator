@@ -1,0 +1,123 @@
+input{
+    border: gray 1px solid;
+    border-radius: 3px;
+    width: 8vw;
+    height: 20px;
+}
+
+
+
+.main{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    
+    position: relative;
+    top: 10vh;
+}
+
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.title{
+    font-size: 48px;
+}
+
+.subtitle{
+    font-size: 24px;
+}
+
+
+.input_frames{
+    width: 80vw;
+    height: fit-content;
+    background-color: gray;
+    border: black solid 2px;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.input_frames_value{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input_frame{
+    width: 35vw;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    border-radius: 4px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    background-color: lightgray;
+}
+
+.input_line{
+    margin-left: 8px;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.calc_btn{
+    width: 10vw;
+    height: 10vh;
+
+    background-color: lightgray;
+    border: 1px black solid;
+    border-radius: 4px;
+    font-size: 16px;
+
+    transition: filter 0.2s;
+}
+
+.calc_btn:hover{
+    filter: brightness(0.9);
+}
+
+.result_frame{
+    width: 30vw;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: lightgray;
+
+    border: 1px black solid;
+    border-radius: 4px;
+
+    padding: 16px;
+}
+
+.result{
+    font-size: 16px;
+}
