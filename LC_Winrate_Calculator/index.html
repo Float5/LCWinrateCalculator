@@ -19,34 +19,46 @@
         <div class="input_frames">
             <div class="input_frames_value">
                 <div class="friendly input_frame">
-                <span class="input_line base_power">기본 위력 : <input type="text" value="0"></span>
-                <span class="input_line coin_power">코인 위력 : <input type="text" value="0"></span>
-                <span class="input_line coin_count">코인 개수 : <input type="text" value="0"></span>
-                <span class="input_line atk_lv">공격 레벨 : <input type="text" value="0"></span>
-                <span class="input_line sanity">정신력 : <input type="text" value="0"></span>
-                <span class="input_line base_power_up">기본 위력 증가 : <input type="text" value="0"></span>
-                <span class="input_line coin_power_up">코인 위력 증가 : <input type="text" value="0"></span>
-                <span class="input_line atk_lv_up">공격 레벨 증가 : <input type="text" value="0"></span>
-                <span class="input_line paralyze">마비 : <input type="text" value="0"></span>
-            </div>
-            <div class="enemy input_frame">
-                <span class="input_line base_power">기본 위력 : <input type="text" value="0"></span>
-                <span class="input_line coin_power">코인 위력 : <input type="text" value="0"></span>
-                <span class="input_line coin_count">코인 개수 : <input type="text" value="0"></span>
-                <span class="input_line atk_lv">공격 레벨 : <input type="text" value="0"></span>
-                <span class="input_line sanity">정신력 : <input type="text" value="0"></span>
-                <span class="input_line base_power_up">기본 위력 증가 : <input type="text" value="0"></span>
-                <span class="input_line coin_power_up">코인 위력 증가 : <input type="text" value="0"></span>
-                <span class="input_line atk_lv_up">공격 레벨 증가 : <input type="text" value="0"></span>
-                <span class="input_line paralyze">마비 : <input type="text" value="0"></span>
-            </div>
+                    <span class="fe_title">아군</span>
+                    <span class="input_line base_power">기본 위력 : <input type="text" value="0"></span>
+                    <span class="input_line coin_power">코인 위력 : <input type="text" value="0"></span>
+                    <span class="input_line coin_count">코인 개수 : <input type="text" value="0"></span>
+                    <span class="input_line atk_lv">공격 레벨 : <input type="text" value="0"></span>
+                    <span class="input_line sanity">정신력 : <input type="text" value="0"></span>
+                    <span class="input_line base_power_up">기본 위력 증가 : <input type="text" value="0"></span>
+                    <span class="input_line coin_power_up">코인 위력 증가 : <input type="text" value="0"></span>
+                    <span class="input_line atk_lv_up">공격 레벨 증가 : <input type="text" value="0"></span>
+                    <span class="input_line paralyze">마비 : <input type="text" value="0"></span>
+                </div>
+                <div class="enemy input_frame">
+                    <span class="fe_title">적군</span>
+                    <span class="input_line base_power">기본 위력 : <input type="text" value="0"></span>
+                    <span class="input_line coin_power">코인 위력 : <input type="text" value="0"></span>
+                    <span class="input_line coin_count">코인 개수 : <input type="text" value="0"></span>
+                    <span class="input_line atk_lv">공격 레벨 : <input type="text" value="0"></span>
+                    <span class="input_line sanity">정신력 : <input type="text" value="0"></span>
+                    <span class="input_line base_power_up">기본 위력 증가 : <input type="text" value="0"></span>
+                    <span class="input_line coin_power_up">코인 위력 증가 : <input type="text" value="0"></span>
+                    <span class="input_line atk_lv_up">공격 레벨 증가 : <input type="text" value="0"></span>
+                    <span class="input_line paralyze">마비 : <input type="text" value="0"></span>
+                </div>
             </div>
 
             <button class="calc_btn" onclick="calculate()">계산</button>
             <div class="result_frame">
                 <span class="result">승률 : 0%</span>
+                <div class="result_remain_coin_frame">
+                    <div class="result_remain_coin_friendly">
+                        
+                    </div>
+                    <div class="result_remain_coin_enemy">
+                        
+                    </div>
+                </div>
             </div>
         </div>
+
+        <span class="warn">확률이 극단적으로 100에 가깝거나, 0에 가까운 경우 100% 혹은 0%로 표기될 수 있습니다.</span>
     </main>
 
 </body>

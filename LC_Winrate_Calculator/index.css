@@ -16,6 +16,8 @@ input{
     
     position: relative;
     top: 10vh;
+
+    text-align: center;
 }
 
 
@@ -32,6 +34,16 @@ input{
 
 .subtitle{
     font-size: 24px;
+}
+
+.fe_title{
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.warn{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 
@@ -103,12 +115,13 @@ input{
 }
 
 .result_frame{
-    width: 30vw;
+    width: fit-content;
     height: fit-content;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
 
     background-color: lightgray;
 
@@ -119,5 +132,30 @@ input{
 }
 
 .result{
+    font-size: 16px;
+}
+
+
+.result_remain_coin_frame{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.result_remain_coin_friendly{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: end;
+}
+
+.result_remain_coin_enemy{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: end;
+}
+
+.result_remain_coin{
     font-size: 16px;
 }

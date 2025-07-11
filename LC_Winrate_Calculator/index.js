@@ -40,6 +40,7 @@ function calculate(){
     
     var finalWinrate = 0;
     var finalDefeatrate = 0;
+    const remainCoins = [Array(friendlyInfo.coinCount).fill(0), Array(enemyInfo.coinCount).fill(0)];
     const tree = [[]];
     const queue = [1];
 
@@ -79,18 +80,36 @@ function calculate(){
         }else{
             if(tree[cur][0].coinCount == 0){
                 finalDefeatrate += tree[cur][2];
+                remainCoins[1][tree[cur][1].coinCount - 1] += tree[cur][2];
             }else{
                 finalWinrate += tree[cur][2];
+                remainCoins[0][tree[cur][0].coinCount - 1] += tree[cur][2];
             }
         }
     }
 
     const resultText = document.querySelector(".result");
     resultText.innerHTML = "승률 : " + (finalWinrate * 100).toFixed(3) + "%";
-    console.log(finalWinrate + ", " + finalDefeatrate);
 
+    const resultRemainCoinFriendly = document.querySelector(".result_remain_coin_friendly");
+    const resultRemainCoinEnemy = document.querySelector(".result_remain_coin_enemy");
 
+    resultRemainCoinFriendly.innerHTML = "";
+    resultRemainCoinEnemy.innerHTML = "";
 
+    for(let i = friendlyInfo.coinCount-1; i >= 0; i--){
+        const resultRemainCoin = document.createElement("span");
+        resultRemainCoin.classList.add("result_remain_coin");
+        resultRemainCoin.innerHTML = i + 1 + "코인 : " + (remainCoins[0][i] * 100).toFixed(3) + "%"; 
+        resultRemainCoinFriendly.appendChild(resultRemainCoin);
+    }
+
+    for(let i = enemyInfo.coinCount-1; i >= 0; i--){
+        const resultRemainCoin = document.createElement("span");
+        resultRemainCoin.classList.add("result_remain_coin");
+        resultRemainCoin.innerHTML = i + 1 + "코인 : " + (remainCoins[1][i] * 100).toFixed(3) + "%"; 
+        resultRemainCoinEnemy.appendChild(resultRemainCoin);
+    }
 }
 
 function getClashWinrate(f, e){
@@ -145,9 +164,7 @@ function getAllPowerChance(info) {
 
 function factorial(n){
     let result = 1;
-    for(let i = 2; i <= n; i++){
-        result *= i
-    }
+    for(let i = 2; i <= n; i++){ result *= i; }
     return result;
 }
 
